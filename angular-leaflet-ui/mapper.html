@@ -6,15 +6,111 @@
     <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
     <script src="http://maps.google.com/maps/api/js?v=3.2&sensor=false"></script>
     <script src="http://matchingnotes.com/javascripts/leaflet-google.js"></script>
+    <script src="jquery-2.2.3.js"></script>
   </head>
   <body>
     <div style="width:800px; height:800px" id="map"></div>
+    <input type="file" id="fileinput" />
     <script type='text/javascript'>
-      var map = new L.Map('map', {center: new L.LatLng(44.91, -93.25), zoom: 12});
+      var map = new L.Map('map', {center: new L.LatLng(44.92, -93.25), zoom: 12});
       var googleLayer = new L.Google('ROADMAP');
       map.addLayer(googleLayer);
-      L.marker([44.91, -93.25]).addTo(map)
-    .bindPopup('TEMP(F):');
+      L.marker([44.895167902, -93.349952487]).addTo(map).bindPopup('TEMP(F): '+'51.575'+'<br>TIME: '+'2016-05-1100:50:19');
+L.marker([44.902527224, -93.349809864]).addTo(map).bindPopup('TEMP(F): '+'51.4616'+'<br>TIME: '+'2016-05-1100:50:50');
+L.marker([44.909645737, -93.350492619]).addTo(map).bindPopup('TEMP(F): '+'51.125'+'<br>TIME: '+'2016-05-1100:51:21');
+L.marker([44.916287754, -93.350054998]).addTo(map).bindPopup('TEMP(F): '+'50.9'+'<br>TIME: '+'2016-05-1100:51:52');
+L.marker([44.92325147, -93.349289214]).addTo(map).bindPopup('TEMP(F): '+'50.9'+'<br>TIME: '+'2016-05-1100:52:23');
+L.marker([44.929940656, -93.349845822]).addTo(map).bindPopup('TEMP(F): '+'50.7866'+'<br>TIME: '+'2016-05-1100:52:54');
+L.marker([44.936621944, -93.349804462]).addTo(map).bindPopup('TEMP(F): '+'50.45'+'<br>TIME: '+'2016-05-1100:53:25');
+L.marker([44.942785793, -93.348083306]).addTo(map).bindPopup('TEMP(F): '+'50.45'+'<br>TIME: '+'2016-05-1100:53:56');
+L.marker([44.948474297, -93.347803221]).addTo(map).bindPopup('TEMP(F): '+'50.225'+'<br>TIME: '+'2016-05-1100:54:27');
+L.marker([44.95622495, -93.347125745]).addTo(map).bindPopup('TEMP(F): '+'50.225'+'<br>TIME: '+'2016-05-1100:54:58');
+L.marker([44.963100222, -93.343941773]).addTo(map).bindPopup('TEMP(F): '+'50.0'+'<br>TIME: '+'2016-05-1100:55:29');
+L.marker([44.968435781, -93.340925918]).addTo(map).bindPopup('TEMP(F): '+'49.775'+'<br>TIME: '+'2016-05-1100:56:00');
+L.marker([44.970056703, -93.331877702]).addTo(map).bindPopup('TEMP(F): '+'49.6616'+'<br>TIME: '+'2016-05-1100:56:31');
+L.marker([44.970155646, -93.320181675]).addTo(map).bindPopup('TEMP(F): '+'49.775'+'<br>TIME: '+'2016-05-1100:57:02');
+L.marker([44.969869897, -93.308753951]).addTo(map).bindPopup('TEMP(F): '+'49.55'+'<br>TIME: '+'2016-05-1100:57:33');
+L.marker([44.970464468, -93.298554255]).addTo(map).bindPopup('TEMP(F): '+'49.775'+'<br>TIME: '+'2016-05-1100:58:04');
+L.marker([44.974113197, -93.291056817]).addTo(map).bindPopup('TEMP(F): '+'49.775'+'<br>TIME: '+'2016-05-1100:58:35');
+L.marker([44.9754387, -93.285939448]).addTo(map).bindPopup('TEMP(F): '+'49.55'+'<br>TIME: '+'2016-05-1100:59:06');
+L.marker([44.979520017, -93.287060155]).addTo(map).bindPopup('TEMP(F): '+'49.4366'+'<br>TIME: '+'2016-05-1100:59:36');
+L.marker([44.985412441, -93.288091939]).addTo(map).bindPopup('TEMP(F): '+'49.4366'+'<br>TIME: '+'2016-05-1101:00:08');
+L.marker([44.991120786, -93.286004458]).addTo(map).bindPopup('TEMP(F): '+'49.1'+'<br>TIME: '+'2016-05-1101:00:39');
+L.marker([44.995010133, -93.282730735]).addTo(map).bindPopup('TEMP(F): '+'49.325'+'<br>TIME: '+'2016-05-1101:01:09');
+L.marker([44.996034331, -93.281658398]).addTo(map).bindPopup('TEMP(F): '+'49.325'+'<br>TIME: '+'2016-05-1101:01:41');
+L.marker([44.992339654, -93.28148369]).addTo(map).bindPopup('TEMP(F): '+'49.2116'+'<br>TIME: '+'2016-05-1101:02:12');
+L.marker([44.992045375, -93.279094527]).addTo(map).bindPopup('TEMP(F): '+'49.325'+'<br>TIME: '+'2016-05-1101:02:41');
+L.marker([44.992695931, -93.274176715]).addTo(map).bindPopup('TEMP(F): '+'49.1'+'<br>TIME: '+'2016-05-1101:03:13');
+L.marker([44.994569325, -93.268356252]).addTo(map).bindPopup('TEMP(F): '+'48.875'+'<br>TIME: '+'2016-05-1101:03:45');
+L.marker([44.996165862, -93.263740411]).addTo(map).bindPopup('TEMP(F): '+'48.875'+'<br>TIME: '+'2016-05-1101:04:15');
+L.marker([44.994708749, -93.261027973]).addTo(map).bindPopup('TEMP(F): '+'48.7616'+'<br>TIME: '+'2016-05-1101:04:46');
+L.marker([44.990574361, -93.258190363]).addTo(map).bindPopup('TEMP(F): '+'48.5366'+'<br>TIME: '+'2016-05-1101:05:18');
+L.marker([44.989157248, -93.257197445]).addTo(map).bindPopup('TEMP(F): '+'48.65'+'<br>TIME: '+'2016-05-1101:05:48');
+L.marker([44.987232388, -93.255475196]).addTo(map).bindPopup('TEMP(F): '+'48.5366'+'<br>TIME: '+'2016-05-1101:06:19');
+L.marker([44.985374853, -93.251165651]).addTo(map).bindPopup('TEMP(F): '+'48.5366'+'<br>TIME: '+'2016-05-1101:06:50');
+L.marker([44.985651788, -93.25060823]).addTo(map).bindPopup('TEMP(F): '+'54.275'+'<br>TIME: '+'2016-05-1101:07:21');
+L.marker([44.985380345, -93.250971456]).addTo(map).bindPopup('TEMP(F): '+'58.325'+'<br>TIME: '+'2016-05-1101:07:52');
+L.marker([44.985329887, -93.250953764]).addTo(map).bindPopup('TEMP(F): '+'59.5616'+'<br>TIME: '+'2016-05-1101:08:23');
+L.marker([44.984075589, -93.248042778]).addTo(map).bindPopup('TEMP(F): '+'62.6'+'<br>TIME: '+'2016-05-1101:08:54');
+L.marker([44.983933785, -93.245865252]).addTo(map).bindPopup('TEMP(F): '+'60.6866'+'<br>TIME: '+'2016-05-1101:09:25');
+L.marker([44.983328273, -93.246109277]).addTo(map).bindPopup('TEMP(F): '+'62.375'+'<br>TIME: '+'2016-05-1101:09:56');
+L.marker([44.982206698, -93.243228106]).addTo(map).bindPopup('TEMP(F): '+'65.75'+'<br>TIME: '+'2016-05-1101:10:27');
+L.marker([44.983295126, -93.242123788]).addTo(map).bindPopup('TEMP(F): '+'69.4616'+'<br>TIME: '+'2016-05-1101:10:59');
+L.marker([44.987899338, -93.236950091]).addTo(map).bindPopup('TEMP(F): '+'71.825'+'<br>TIME: '+'2016-05-1101:11:30');
+L.marker([44.994391642, -93.238168568]).addTo(map).bindPopup('TEMP(F): '+'71.825'+'<br>TIME: '+'2016-05-1101:12:01');
+L.marker([45.000917405, -93.235508835]).addTo(map).bindPopup('TEMP(F): '+'68.7866'+'<br>TIME: '+'2016-05-1101:12:32');
+L.marker([45.0015803, -93.231211684]).addTo(map).bindPopup('TEMP(F): '+'68.9'+'<br>TIME: '+'2016-05-1101:13:03');
+L.marker([45.00158738, -93.231186359]).addTo(map).bindPopup('TEMP(F): '+'68.7866'+'<br>TIME: '+'2016-05-1101:13:34');
+L.marker([45.001331638, -93.229647559]).addTo(map).bindPopup('TEMP(F): '+'68.7866'+'<br>TIME: '+'2016-05-1101:14:05');
+L.marker([45.002072336, -93.227097243]).addTo(map).bindPopup('TEMP(F): '+'69.575'+'<br>TIME: '+'2016-05-1101:14:36');
+L.marker([45.002898708, -93.228272789]).addTo(map).bindPopup('TEMP(F): '+'69.8'+'<br>TIME: '+'2016-05-1101:15:06');
+L.marker([45.002855449, -93.228676572]).addTo(map).bindPopup('TEMP(F): '+'68.5616'+'<br>TIME: '+'2016-05-1101:15:38');
+L.marker([45.002849106, -93.228675143]).addTo(map).bindPopup('TEMP(F): '+'67.8866'+'<br>TIME: '+'2016-05-1101:16:09');
+L.marker([45.002684286, -93.228423121]).addTo(map).bindPopup('TEMP(F): '+'67.2116'+'<br>TIME: '+'2016-05-1101:16:39');
+L.marker([45.002660648, -93.228358379]).addTo(map).bindPopup('TEMP(F): '+'66.875'+'<br>TIME: '+'2016-05-1101:17:11');
+L.marker([45.002631364, -93.228268311]).addTo(map).bindPopup('TEMP(F): '+'66.425'+'<br>TIME: '+'2016-05-1101:17:42');
+L.marker([45.002850559, -93.227723287]).addTo(map).bindPopup('TEMP(F): '+'66.2'+'<br>TIME: '+'2016-05-1101:18:12');
+L.marker([45.002704625, -93.229506603]).addTo(map).bindPopup('TEMP(F): '+'65.975'+'<br>TIME: '+'2016-05-1101:18:43');
+L.marker([45.00171039, -93.236284778]).addTo(map).bindPopup('TEMP(F): '+'65.975'+'<br>TIME: '+'2016-05-1101:19:15');
+L.marker([44.995749471, -93.238786065]).addTo(map).bindPopup('TEMP(F): '+'65.75'+'<br>TIME: '+'2016-05-1101:19:45');
+L.marker([44.989619372, -93.23647276]).addTo(map).bindPopup('TEMP(F): '+'65.75'+'<br>TIME: '+'2016-05-1101:20:17');
+L.marker([44.984835254, -93.241928476]).addTo(map).bindPopup('TEMP(F): '+'65.75'+'<br>TIME: '+'2016-05-1101:20:48');
+L.marker([44.984214655, -93.245168578]).addTo(map).bindPopup('TEMP(F): '+'65.8616'+'<br>TIME: '+'2016-05-1101:21:19');
+L.marker([44.985900397, -93.249481155]).addTo(map).bindPopup('TEMP(F): '+'65.75'+'<br>TIME: '+'2016-05-1101:21:50');
+L.marker([44.985635361, -93.250291041]).addTo(map).bindPopup('TEMP(F): '+'65.75'+'<br>TIME: '+'2016-05-1101:22:21');
+L.marker([44.985468369, -93.250788046]).addTo(map).bindPopup('TEMP(F): '+'65.6366'+'<br>TIME: '+'2016-05-1101:22:52');
+L.marker([44.985356345, -93.250920102]).addTo(map).bindPopup('TEMP(F): '+'65.525'+'<br>TIME: '+'2016-05-1101:23:23');
+L.marker([44.985038203, -93.250240282]).addTo(map).bindPopup('TEMP(F): '+'67.6616'+'<br>TIME: '+'2016-05-1100:34:16');
+L.marker([44.983093366, -93.245414242]).addTo(map).bindPopup('TEMP(F): '+'64.85'+'<br>TIME: '+'2016-05-1100:34:48');
+L.marker([44.980303842, -93.244758383]).addTo(map).bindPopup('TEMP(F): '+'63.6116'+'<br>TIME: '+'2016-05-1100:35:19');
+L.marker([44.975107978, -93.248110979]).addTo(map).bindPopup('TEMP(F): '+'63.6116'+'<br>TIME: '+'2016-05-1100:35:50');
+L.marker([44.969060223, -93.253421507]).addTo(map).bindPopup('TEMP(F): '+'61.8116'+'<br>TIME: '+'2016-05-1100:36:22');
+L.marker([44.965814678, -93.260267319]).addTo(map).bindPopup('TEMP(F): '+'61.025'+'<br>TIME: '+'2016-05-1100:36:53');
+L.marker([44.964755827, -93.269232651]).addTo(map).bindPopup('TEMP(F): '+'60.2366'+'<br>TIME: '+'2016-05-1100:37:24');
+L.marker([44.958156996, -93.269740343]).addTo(map).bindPopup('TEMP(F): '+'59.3366'+'<br>TIME: '+'2016-05-1100:37:55');
+L.marker([44.950871006, -93.274224629]).addTo(map).bindPopup('TEMP(F): '+'59.3366'+'<br>TIME: '+'2016-05-1100:38:26');
+L.marker([44.94296533, -93.274781045]).addTo(map).bindPopup('TEMP(F): '+'58.2116'+'<br>TIME: '+'2016-05-1100:38:56');
+L.marker([44.934427578, -93.2747291]).addTo(map).bindPopup('TEMP(F): '+'57.3116'+'<br>TIME: '+'2016-05-1100:39:27');
+L.marker([44.925784035, -93.274811928]).addTo(map).bindPopup('TEMP(F): '+'56.8616'+'<br>TIME: '+'2016-05-1100:40:00');
+L.marker([44.918315159, -93.275015105]).addTo(map).bindPopup('TEMP(F): '+'56.6366'+'<br>TIME: '+'2016-05-1100:40:30');
+L.marker([44.910548556, -93.274940447]).addTo(map).bindPopup('TEMP(F): '+'55.85'+'<br>TIME: '+'2016-05-1100:41:01');
+L.marker([44.902299784, -93.275021798]).addTo(map).bindPopup('TEMP(F): '+'55.625'+'<br>TIME: '+'2016-05-1100:41:33');
+L.marker([44.894763816, -93.275121586]).addTo(map).bindPopup('TEMP(F): '+'55.0616'+'<br>TIME: '+'2016-05-1100:42:03');
+L.marker([44.890278304, -93.281408246]).addTo(map).bindPopup('TEMP(F): '+'54.725'+'<br>TIME: '+'2016-05-1100:42:34');
+L.marker([44.890249727, -93.292111214]).addTo(map).bindPopup('TEMP(F): '+'54.6116'+'<br>TIME: '+'2016-05-1100:43:06');
+L.marker([44.885052495, -93.296111408]).addTo(map).bindPopup('TEMP(F): '+'54.5'+'<br>TIME: '+'2016-05-1100:43:36');
+L.marker([44.878001795, -93.297699199]).addTo(map).bindPopup('TEMP(F): '+'54.5'+'<br>TIME: '+'2016-05-1100:44:07');
+L.marker([44.870456883, -93.29897955]).addTo(map).bindPopup('TEMP(F): '+'53.825'+'<br>TIME: '+'2016-05-1100:44:38');
+L.marker([44.863865288, -93.299006601]).addTo(map).bindPopup('TEMP(F): '+'53.825'+'<br>TIME: '+'2016-05-1100:45:09');
+L.marker([44.862044245, -93.306461188]).addTo(map).bindPopup('TEMP(F): '+'53.0366'+'<br>TIME: '+'2016-05-1100:45:40');
+L.marker([44.861731591, -93.316122877]).addTo(map).bindPopup('TEMP(F): '+'53.0366'+'<br>TIME: '+'2016-05-1100:46:11');
+L.marker([44.859830245, -93.326076012]).addTo(map).bindPopup('TEMP(F): '+'52.5866'+'<br>TIME: '+'2016-05-1100:46:42');
+L.marker([44.858092981, -93.336483049]).addTo(map).bindPopup('TEMP(F): '+'52.475'+'<br>TIME: '+'2016-05-1100:47:13');
+L.marker([44.858829683, -93.346104137]).addTo(map).bindPopup('TEMP(F): '+'52.25'+'<br>TIME: '+'2016-05-1100:47:44');
+L.marker([44.863796309, -93.350019343]).addTo(map).bindPopup('TEMP(F): '+'52.25'+'<br>TIME: '+'2016-05-1100:48:15');
+L.marker([44.871120993, -93.350191137]).addTo(map).bindPopup('TEMP(F): '+'52.025'+'<br>TIME: '+'2016-05-1100:48:46');
+L.marker([44.879038105, -93.350362853]).addTo(map).bindPopup('TEMP(F): '+'51.6866'+'<br>TIME: '+'2016-05-1100:49:17');
+L.marker([44.887083251, -93.350075226]).addTo(map).bindPopup('TEMP(F): '+'51.575'+'<br>TIME: '+'2016-05-1100:49:48');
     </script>
   </body>
 </html>
