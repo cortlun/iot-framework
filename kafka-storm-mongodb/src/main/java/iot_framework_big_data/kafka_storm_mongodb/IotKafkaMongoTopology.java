@@ -55,7 +55,7 @@ public class IotKafkaMongoTopology {
 	}
 	
 	public StormTopology buildTopology(String dburl, String discriminator, String kafkaUrl, String systemName){
-		SpoutConfig kafkaConfig = new SpoutConfig(hosts, discriminator, "/brokers", "windows");
+		SpoutConfig kafkaConfig = new SpoutConfig(hosts, discriminator, "/brokers", systemName);
 		kafkaConfig.zkServers = ImmutableList.of(kafkaUrl);
 		kafkaConfig.zkPort = 2181;
 		kafkaConfig.scheme = new RawMultiScheme();
