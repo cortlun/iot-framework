@@ -1,6 +1,6 @@
 # iot-framework
 
-##Overview
+## Overview
 This project utilizes the Raspberry Pi and big data technologies to create a framework for geotagging any sensor data, performing 
 reliable stream analytics and batching of that data in memory utilizing Apache Kafka and Storm projects, and inserting it to
 a MongoDB NoSQL data store for batch analytics and enablement of a lambda big data architecture.  As framework enhancements are 
@@ -17,7 +17,7 @@ MongoDB is used as a backend for web applications and batch processing.  A lambd
 //TO-DO 
 Node.js API to serve up a lambda reports to web apps.
 
-###Hardware and RPI configuration
+### Hardware and RPI configuration
 **Hardware**
 - Raspberry Pi B (w/ sd card, power cable, running raspbian)
 - GlobalSat BU-353-S4 USB GPS Receiver (Black)
@@ -30,17 +30,17 @@ Node.js API to serve up a lambda reports to web apps.
 Detailed thermometer setup, pi configurations, bluetooth setup, etc. to come.  For now you just get my work notes:
 DISCRIMINATOR should be set in the iot.config and uniquely identify whatever sensor data you're sending.  This is the name of the Kafka queue, as well as the name of the data collection in mongodb.
 
-####Installations
+#### Installations
 Install and configure necessary python libs and the aws cli (details to come)
 
-####Thermometer setup
+#### Thermometer setup
 Kudos to this tutorial: http://www.modmypi.com/blog/ds18b20-one-wire-digital-temperature-sensor-and-the-raspberry-pi
 Added this to /boot/config.txt for w1 gpio sensing:
 dtoverlay=w1-gpio
 sudo modprobe w1-gpio
 sudo modprobe w1-therm
 
-####Optional bluetooth setup
+#### Optional bluetooth setup
 Kudos to this tutorial: http://www.wolfteck.com/projects/raspi/iphone/
 sudo apt-get update
 sudo apt-get upgrade
@@ -50,7 +50,7 @@ sudo bluez-simple-agent hci0 <iphone mac address>
 sudo bluez-test-device trusted <iphone mac address> yes
 sudo pand -c <iphone mac address>  -role PANU --persist 30
 
-####Storm/Kafka
+#### Storm/Kafka
 Storm is configured using iot.storm.config file.  It includes the full connection string for mongodb and the discriminator (must match the discriminator propery in /boot/iot.config in the pi).  Automatic queue creation seems to not work for the kafka-storm spout.  However, it works for the pi producer.  So, unless the pi is started first iot_storm.jar will fail to execute.  
 
 Alternatively, if storm/kafka are on the same box you can let rc.local create the queue before storm is started.  Another option if storm is remote is to have a client kafka producer from the storm box produce a "test message" to Kafka just so the queue is automatically created.
